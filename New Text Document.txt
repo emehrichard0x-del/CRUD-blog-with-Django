@@ -1,0 +1,16 @@
+1  pip list 
+2  pip install django
+3  django-admin startproject myproject .
+4  python manage.py startapp blog
+5  register BLOG to the Myproject->settings.py
+6 Always migrate the apps so as to connect it to the main project Django
+7. python manage.py makemigrations(prepare for migration)
+8. python manage.py migrate(push them)
+9. then go to views for web request
+10. url.py in blog/dir, specifically for only blog pages
+11. link it to the project url using include
+12. render html,in blog create a folder call TEMPLATES\blog
+13. jinger (% %) user to include python to html,
+14. after that we move to the admin.py
+15. python manage.py createsuperuser
+15. python manage.py runserver

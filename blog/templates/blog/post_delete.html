@@ -1,0 +1,20 @@
+{%extends "blog/base.html" %}
+
+{%block content%}
+
+<div class="content-section">
+    <h1>delete post</h1>
+    <div class="mb-3">
+        <p>are you sure you want to delete</p>
+        <form method="post">
+            {%csrf_token%}
+            <button type="submit">Yes, Delete</button>
+            <a href="{%url 'home'%}">cancel</a>
+        </form>
+
+    </div>
+</div>
+
+
+
+{%endblock%}
