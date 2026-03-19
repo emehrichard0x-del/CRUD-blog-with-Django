@@ -6,9 +6,12 @@
     <h1 class="mb-4">New Post</h1> 
     <form method="post">
        {% csrf_token %}
+      
        {% for field in form%}
+           
         <div class="mb-3">
-            <label for="{{field.id_for_label}}">{{field.label}}</label>
+            <label for="{{field.id_for_label}}">a{{field.label}}</label>
+            {{field.name}}
             {%if field.name == 'content'%}
                 <textarea name="{{field.name}}" class="form-control">{{field.value}}</textarea>
             {%else%}
